@@ -22,7 +22,7 @@ __Nota:__ *Para que :whale: pueda trabajar sin problemas, les pedira que configu
 
 Este archivo debe estar ubicado en la carpeta de los datos del usuario `%USERPROFILE%` (este comando pueden pegarlo en el explorardor de windows)
 
-![Ruta de %USERPROFILE%](screenshots/Screenshot_1.png)
+![Ruta de %USERPROFILE%](Screenshots/Screenshot_1.png)
 
 ## Cómo ejecutarlo
 
@@ -36,21 +36,21 @@ docker-compose -f sonar.yml up -d
 
 *En mi caso yo lo deje en la raiz del disco D, pueden poner la ruta que deseen utlizando el caracter / para separar las carpetas*
 
-![Bajando las imagenes](screenshots/Screenshot_2.png)
+![Bajando las imagenes](Screenshots/Screenshot_2.png)
 
 Y aquí comenzara el proceso de descarga de las imagenes que vamos a utilizar para levantar el servidor local (sírvase un :coffee: y espere a que se complete la descarga)
 
 `2.` Al concluir la descarga podemos verificar dentro de nuestro Docker Desktop que tenemos las imagenes de postgres y sonarque habilitatadas y en uso
 
-![Docker Images](screenshots/Screenshot_3.png)
+![Docker Images](Screenshots/Screenshot_3.png)
 
 Asi como tambien podemos verificar que los volumenes necesarios para persistir la data estan creados
 
-![Docker Volumes](screenshots/Screenshot_4.png)
+![Docker Volumes](Screenshots/Screenshot_4.png)
 
 Pero, al verficiar los contenedores, vemos que hay un problema y que el contenedor de sonar está detenido.
 
-![Docker Containers](screenshots/Screenshot_5.png)
+![Docker Containers](Screenshots/Screenshot_5.png)
 
 Esto se debe a los requisitos de SonarQube como Host, lo que dice en la página oficial de la [imagen de docker](https://hub.docker.com/_/sonarqube) es lo siguiente: 
 
@@ -68,10 +68,10 @@ __Importante:__ *Estos comandos se deben ingresar cada vez que se inicie docker 
 
 `4.` Ahora se debe reinicar Docker Desktop para que se reflejen los cambios y se pueda habilitar el uso de las imagenes de sonarqube:
 
-![Docker Iniciado](screenshots/Screenshot_6.png)
+![Docker Iniciado](Screenshots/Screenshot_6.png)
 
 Y listo!!! tenemos nuestro SonarQube Local :tada:
 
-![Docker Iniciado](screenshots/Screenshot_7.png)
+![Docker Iniciado](Screenshots/Screenshot_7.png)
 
 El manejo de Sonar y sus scanners sera en otro capítulo :wave:. 
